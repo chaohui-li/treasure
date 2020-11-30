@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            font-size: 20px;
+            padding-left: 7px;
+            color: red;
+        }
+        .two{
+            color: silver;
+           
+        }
+        input{
+            border-color: red;
+            border-width: 2px;
+            width: 700px;
+            height: 60px;
+            
+        }
+        
+         #ping{
+             width: 50px;
+             height: 30px;
+             
+         }
+         .replay{
+            padding-left: 40%;
+
+         }
+    </style>
+</head>
+<body>
+    <div class="comment" >
+        <span class="one" >1</span>
+        <span class="two" >条评论</span>
+    </div>
+    <div class="twoline" >
+        <span class="zan" >
+            <input type="text" placeholder="赞" />
+        </span>
+        <span class="pinglun" >
+        
+          <input  id="ping" type="button" value="评论" style="background-color: rgb(202, 15, 15);">
+        </span>
+    </div>
+
+    <div>
+        <span class="userName">
+            
+        </span>
+        <span class="dateAndtime" >
+            11-27 10:21
+        </span>
+        <span class="replay" >
+            0回复
+        </span>
+        <div class="lastLine" >
+            赞
+        </div>
+    </div>
+</body>
+<html>
