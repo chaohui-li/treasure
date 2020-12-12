@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 样式调整 */
+        .sho div{
+            width: 60px;
+            height: 60px;
+            background-color: rgb(206, 206, 206);
+            float: left;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
+        .buttons{
+            clear: both;
+            
+        }
+        .buttons input{
+            float: left;
+            margin-left: 30px;
+        }
+        .buttos input:nth-child(3){
+            margin-left: 45px;
+        }
+    </style>
+    <script>
+           
+        
+        function changecolor(color){
+            console.log("我要变色啦"+color)
+            // 检验是否失效，关系是否成功
+            document.getElementById('red-button').style.backgroundColor="gray";
+            document.getElementById('yellow-button').style.backgroundColor="gray";
+            document.getElementById('green-button').style.backgroundColor="gray";
+            // 信号灯初始颜色为灰色
+            document.getElementById('red').style.backgroundColor="gray";
+            document.getElementById('yellow').style.backgroundColor="gray";
+            document.getElementById('green').style.backgroundColor="gray";
+            if(color=="red"){
+            //  让按钮变成红色
+            document.getElementById('red-button').style.backgroundColor="red";
+            document.getElementById('red').style.backgroundColor="red";
+            }
+            
+            if(color=="yellow"){
+            //  让按钮变成黄色
+            document.getElementById('yellow-button').style.backgroundColor="yellow";
+            document.getElementById('yellow').style.backgroundColor="yellow";
+            }
+            if(color=="green"){
+            // 让按钮变成绿色
+            document.getElementById('green-button').style.backgroundColor="green";
+            document.getElementById('green').style.backgroundColor="green";
+            }
+        }
+
+    </script>
+</head>
+<body>
+        <div>  
+    
+    <!-- 主要显示区域 -->
+    <div id="main">
+        <!-- 上方的灯 -->
+    <div class="sho">
+    <div id="red"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    </div>
+    <!-- 下方按钮 -->
+    <div class="buttons">
+    <input type="button" id="red-button"    value="红灯"  onclick="changecolor('red')">
+    <input type="button" id="yellow-button"value="黄灯" onclick="changecolor('yellow')">
+    <input type="button" id="green-button" value="绿灯" onclick="changecolor('green')">
+</div>
+
+    
+</body>
+</html>
