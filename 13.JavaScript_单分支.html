@@ -1,0 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-29 10:49:51
+ * @LastEditTime: 2020-06-29 11:45:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/13.JavaScript_单分支.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单分支</title>
+</head>
+<body>
+  <h3>查看年龄是否已成年:</h3>
+  <label for="age">输入用户年龄:</label>
+  <input type="text" id="user_age" name="age">
+  <!-- 绑定点击事件 -->
+  <input type="button" value="判断是否成年" onclick="checkUserAge()">
+</body>
+<script>
+  // 1. 声明函数
+  function checkUserAge() {
+    // 2. 获取 id 为 user_age 的input
+    var get_el_input = document.getElementById("user_age");
+    // 3. 取得 input 对应的value, 并通过parseInt()将字符串转换成整数
+    var get_el_value = parseInt(get_el_input.value);
+    console.log(get_el_value);
+    // 4. 判断年龄
+    console.log("开始");
+    if ( get_el_value < 18) {
+      console.log("还小，未成年!!");
+    }
+
+    if ( get_el_value > 6 && get_el_value < 18) {
+      console.log("我还是曾经的那个少年!!!😎");
+    }
+
+    if ( get_el_value > 255 || get_el_value < 0 ) {
+      console.log("未成人或不可能!!!!");
+    }
+
+    if ( get_el_value == 18 || get_el_value > 18 && get_el_value <= 30) {
+       console.log("成人了，可以成家立业了！！！");
+    }
+    
+    console.log("结束");
+  }
+</script>
+</html>

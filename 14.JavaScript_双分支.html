@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-29 14:22:20
+ * @LastEditTime: 2020-06-29 14:28:01
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/14.JavaScript_双分支.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>条件语句 双分支</title>
+</head>
+<body>
+  <h3>查看年龄是否已成年:</h3>
+  <label for="age">输入用户年龄:</label>
+  <input type="text" id="user_age" name="age">
+  <!-- 绑定点击事件 -->
+  <input type="button" value="判断是否成年" onclick="checkUserAge()">
+</body>
+<script>
+    // 1. 声明函数
+    function checkUserAge() {
+      // 2. 获取 id 为 user_age 的input
+      var get_el_input = document.getElementById("user_age");
+      // 3. 取得 input 对应的value, 并通过parseInt()将字符串转换成整数
+      var get_el_value = parseInt(get_el_input.value);
+      console.log(get_el_value);
+      // 4. 判断年龄
+      if (get_el_value >= 18 && get_el_value <= 30) {
+        console.log("已成年，少玩点手机，成家立业!!!!");
+      } else {
+        console.log("好好学习，享受生活!!!");
+      }
+    }
+</script>
+</html>
