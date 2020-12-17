@@ -1,0 +1,59 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-03 11:45:50
+ * @LastEditTime: 2020-07-03 16:19:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/19.JavaScript_九九乘法表.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九九乘法表</title>
+  <style>
+    .col {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      border: 1px solid gainsboro;
+      margin-right: 2px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  
+</body>
+<script>
+  /*
+  for(let x = 1; x <=9 ; x++){
+    for(let y = 1; y <= x; y++){
+      if (x <= 4 && x >= 1) {
+        if (y == 3) {
+          document.write("&nbsp;" + "<span>" + x + "*" + y + "=" + x * y + " " + "</span>");
+        } else {
+          document.write("<span>" + x + "*" + y + "=" + x * y + " " + "</span>");
+        }
+      } else {
+        document.write("<span>" + x + "*" + y + "=" + x * y + " " + "</span>");
+      }
+    }
+    document.write("<br />");
+  }*/
+
+  for (let x = 1; x <= 9; x++) {
+    for (let y = 1; y <= x; y++) {
+      document.write("<span class='col'>" + x + "*" + y + "=" + x * y + " " + "</span>");
+    }
+    document.write("<br />");
+  }
+
+  for(let x= 1; x <= 10; x++){
+    for(let y = 1; y <= 10; y++){
+      console.log(x,y);
+    }
+  }
+</script>
+</html>
