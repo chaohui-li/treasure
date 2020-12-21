@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-18 14:03:28
+ * @LastEditTime: 2020-06-18 16:55:40
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/02.JavaScript_String字符型.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String 字符型变量</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 1. 定义了一个名字 t_name 被 var 修饰，这是一个变量 此时默认是undefined，特殊数据类型
+  var t_name;
+  // 2. 赋值 JavaScript是根据 等号 = 右边的值进行数据类型的判定
+  t_name = "Tony"; // 此时 t_name 才是 String 字符类型  双引号
+  // 3. 验证 t_name 的类型
+  console.log(t_name); // 打印 t_name
+  console.log(typeof(t_name)); // 使用typeof 进行类型判断
+
+  // 4. 定义了一个名字为user_id 被var 修饰，根据等号 右边的值，user_id 被判定为字符类型
+  var user_id = '111111111111111111'; // 单引号
+  console.log(user_id);
+  console.log(typeof(user_id));
+
+  // 5. 双引号 和 单引号 建议使用 外双内单的方式。
+  var a_word = "' just do it ' no zuo no die why you try,you try you die don't ask why";
+  var b_word = '" let it go " no zuo no die why you try,no try no high give me five';
+  console.log(a_word, b_word);
+
+  // 6 转义
+  var who_am_i = "I\'m a good man.";
+  var day_1111 = "双\"11.11\"购物狂欢！！！";
+  var table_header = "\t第一列\t第二列\t第三列\t第四列";
+  var table_body1 = "\t星期一\t西红柿\t土 豆\t番茄";
+  var table_body2 = "\t星期二\t茄 子\t黄 瓜\t扁豆";
+  console.log(table_header);
+  console.log(table_body1);
+  console.log(table_body2);
+</script>
+</html>
