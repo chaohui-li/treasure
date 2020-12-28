@@ -1,0 +1,47 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-29 16:25:43
+ * @LastEditTime: 2020-06-30 14:11:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/15.JavaScript_多分支语句.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多分支语句 if else if</title>
+</head>
+<body>
+  <h3>查看成绩段位:</h3>
+  <label for="score">输入学生成绩:</label>
+  <input type="text" id="user_score" name="score">
+  <!-- 绑定点击事件 -->
+  <input type="button" value="成绩统计" onclick="checkScore()">
+</body>
+<script>
+  // 1. 声明函数
+  function checkScore() {
+    // 2. 获取 id 为 user_age 的input
+    var get_el_input = document.getElementById("user_score");
+    // 3. 取得 input 对应的value, 并通过parseInt()将字符串转换成整数
+    var get_el_value = parseInt(get_el_input.value);
+    console.log(get_el_value);
+    // 4. 判断成绩段位
+    if (get_el_value > 90 && get_el_value <= 100) {
+      console.log("优秀!!!");
+    } else if (get_el_value >= 80 && get_el_value <= 90) {
+      console.log("良好，需要继续加油!!!");
+    } else if (get_el_value >= 70 && get_el_value < 80) {
+      console.log("中等!!!");
+    } else if (get_el_value >= 60 && get_el_value < 70) {
+      console.log("及格!!!");
+    } else {
+      console.log("不及格，重修！！！");
+    }
+  }
+
+  
+</script>
+</html>
