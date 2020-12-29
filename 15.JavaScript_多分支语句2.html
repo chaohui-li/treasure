@@ -1,0 +1,53 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-30 14:10:57
+ * @LastEditTime: 2020-06-30 15:21:20
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/15.JavaScript_多分支2.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多分支语句 switch 语句</title>
+</head>
+<body>
+  <h3>查看成绩段位:</h3>
+  <label for="score">输入学生成绩:</label>
+  <input type="text" id="user_score" name="score">
+  <!-- 绑定点击事件 -->
+  <input type="button" value="成绩统计" onclick="checkScore()">
+</body>
+<script>
+  // 1. 声明函数
+  function checkScore() {
+    // 2. 获取 id 为 user_age 的input
+    var get_el_input = document.getElementById("user_score");
+    // 3. 取得 input 对应的value, 并通过parseInt()将字符串转换成整数
+    var get_el_value = parseInt(get_el_input.value);
+    console.log(get_el_value);
+    // 4. 判断成绩段位
+    var score_level = parseInt(get_el_value / 10); // 100分制
+    switch (score_level) {
+      case 10:
+      case 9:
+        console.log("优秀!!!");
+        break;
+      case 8:
+        console.log("良好，需要继续加油!!!");
+        break;
+      case 7:
+        console.log("中等!!!");
+        break;
+      case 6:
+        console.log("及格!!!");
+        break;
+      default:
+        console.log("不及格，重修！！！");
+        break;
+    }
+  }
+</script> 
+</html>
