@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math 方法</title>
+	</head>
+	<body>
+		<!-- 构建页面内容 -->
+		<input type="button" name="btnMath" value="Math对象常用函数" onclick="mathMethod()" />
+		<div id="show" style="border:1px solid red;height:300px;margin-top:20px;padding-left:5px;"></div>
+	</body>
+	<script type="text/javascript">
+		// 1. 实现点击事件：
+		function mathMethod() {
+			// 2. Math 方法
+			// 上舍入  舍去小数部分，整数部分都加1
+			var str = "25.8的上舍入值：" + Math.ceil(25.8) + "<br />";
+			str += "25.1的上舍入值：" + Math.ceil(25.1) + "<br />";
+			str += "-25.8的上舍入值：" + Math.ceil(-25.8) + "<br />";
+			str += "-25.1的上舍入值：" + Math.ceil(-25.1) + "<br />";
+			// 下舍入  舍去小数部分，整数部分不变
+			str += "25.8的下舍入值：" + Math.floor(25.8) + "<br />";
+			str += "25.1的下舍入值：" + Math.floor(25.1) + "<br />";
+			str += "-25.8的下舍入值：" + Math.floor(-25.8) + "<br />";
+			str += "-25.1的下舍入值：" + Math.floor(-25.1) + "<br />";
+			// 四舍五入
+			str += "25.8的四舍五入值：" + Math.round(25.8) + "<br />";
+			str += "25.1的四舍五入值：" + Math.round(25.1) + "<br />";
+			str += "-25.8的四舍五入值：" + Math.round(-25.8) + "<br />";
+			str += "-25.1的四舍五入值：" + Math.round(-25.1) + "<br />";
+			// 随机数 返回0~1之间的随机数
+			str += "1~100的随机数：" + Math.floor(Math.random() * 100) + "<br />";
+			// 3.获取显示元素标签
+			let showDiv = document.getElementById("show");
+			showDiv.innerHTML = str;
+		}
+	</script>
+</html>
