@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mate 时间对象</title>
+	</head>
+	<body>
+		<input type="button" name="btnDate" value="Date对象常用函数" onclick="getMateMethod()" />
+		<div id="show" style="border:1px solid red;height:300px;margin-top:20px;padding-left:5px;"></div>
+	</body>
+	<script type="text/javascript">
+		// 1. 实现点击事件
+		function getMateMethod() {
+			// 2. 创建 时间对象
+			let date = new Date();
+			let str = "当前日期：" + date.getDate() + "日" + "<br />";
+			str += "今天是星期：" + date.getDay() + "<br />";
+			str += "小时：" + date.getHours() + "<br />";
+			str += "分钟：" + date.getMinutes() + "<br />";
+			str += "秒：" + date.getSeconds() + "<br />";
+			str += "当前月份：" + (date.getMonth() + 1) + "<br />";//注意月份是从0开始计数
+			str += "当前年份：" + date.getFullYear() + "<br />";
+			str += "毫秒数：" + date.getTime() + "<br />";
+			// 3. 获取显示元素标签
+			let show_el = document.getElementById("show");
+			show_el.innerHTML = str;
+		}
+	</script>
+</html>
