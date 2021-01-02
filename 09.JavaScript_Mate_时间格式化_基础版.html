@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		// 1. 封装格式化功能函数
+		function format(d) {
+			//参数d必须为Date对象，否则会提示getFullYear()等方法not a function
+			//可通过new Date("2020-7-27")的方式将日期字符串转化为日期对象
+			return [d.getFullYear(), d.getMonth() + 1, d.getDate()].join('-') +
+				' ' + [('0' + d.getHours()).slice(-2),
+					('0' + d.getMinutes()).slice(-2),
+					('0' + d.getSeconds()).slice(-2)
+				].join(':');
+		}
+		// 2. 使用format 格式化时间
+		let date = format(new Date());    //格式化当前时间
+		console.log(date);
+		// 3. 格式化指定时间
+		let d = new Date("2020-07-08");
+		date =  format(d);
+		console.log(date);
+		
+	</script>
+</html>
