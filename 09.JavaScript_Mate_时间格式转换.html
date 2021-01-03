@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>时间格式转换</title>
+	</head>
+	<body>
+		<!-- 构建页面内容 -->
+		<input type="button" name="btnMath" value="Mate时间格式转换" onclick="mateMethod()" />
+	</body>
+	<script type="text/javascript">
+		// 1. 按钮事件
+		function mateMethod(){
+			let timer1 = new Date();
+			let timer2 = new Date(1595783187032);
+			let timer3 = new Date("2020-07-27");
+			let timer4 = new Date(2020,7,27,0,13);
+			
+			console.log(timer1);
+			console.log(timer2);
+			console.log(timer3);
+			console.log(timer4);
+			
+			// 其它方法
+			let timer5 = Date.parse(new Date("2020-07-27"));
+			let timer6 = Date.UTC(2020,7,27);
+			let timer7 = Date.now();
+			console.log(timer5);
+			console.log(timer6);
+			console.log(timer7);
+			
+			console.log(timer1.toString());//Mon Jul 27 2020 01:21:24 GMT+0800 (中国标准时间)
+			console.log(timer1.toDateString());//Mon Jul 27 2020
+			console.log(timer1.toTimeString());//01:21:24 GMT+0800 (中国标准时间)
+			console.log(timer1.toLocaleDateString());//2020/7/27
+			console.log(timer1.toLocaleTimeString());//上午1:21:24
+			console.log(timer1.toJSON());//2020-07-26T17:21:24.548Z
+		}
+	</script>
+</html>
