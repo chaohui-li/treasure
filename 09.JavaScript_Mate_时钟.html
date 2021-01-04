@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 构建页面结构 -->
+		<input type="button" id="btnStart" value="开始" />
+		<input type="button" id="btnStop" value="停止" />
+		<div id="show" style="border:1px solid red;height:300px;margin-top:20px;padding-left:5px;"></div>
+	</body>
+	<script type="text/javascript">
+		// 1. 时间计算
+		function showTime(callback) {
+			let currentDate = new Date();
+			let year = currentDate.getFullYear();
+			// 月份
+			let month = currentDate.getMonth() + 1;
+			// 日
+			let day = currentDate.getDate();
+			// 小时
+			let hour = currentDate.getHours();
+			// 分钟
+			let mit = currentDate.getMinutes();
+			// 秒
+			let second = currentDate.getSeconds();
+			// 星期
+			let week;
+			switch (currentDate.getDay()) {
+				case 0:
+					week = "星期日";
+					break;
+				case 1:
+					week = "星期一";
+					break;
+				case 2:
+					week = "星期二";
+					break;
+				case 3:
+					week = "星期三";
+					break;
+				case 4:
+					week = "星期四";
+					break;
+				case 5:
+					week = "星期五";
+					break;
+				case 6:
+					week = "星期六";
+					break;
+			}
+			let str = "当前时间:" + year + "年" + month + "月" + day + "日" + "&nbsp;&nbsp;" + hour + ":" + mit + ":" + second + "&nbsp;&nbsp;" + week;
+			callback(str);
+		}
+		// 2. 开始
+		// 获取start 按钮标签
+		let btnStart = document.getElementById("btnStart");
+		// 2.3 开启定时器
+		var timer_handle = null;
+		btnStart.onclick = function (){
+			// 2.1 获取显示元素标签
+			let show_el = document.getElementById("show");
+			// 2.2 显示时间
+			showTime(function(msg){
+				show_el.innerHTML = msg;
+			});
+			// 2.4 开始定时器
+			timer_handle = setInterval(function(){
+				showTime(function(msg){
+					show_el.innerHTML = msg;
+				});
+			}, 1000);
+		}
+		// 3. 停止
+		// 获取stop 按钮标签
+		let btnStop = document.getElementById("btnStop");
+		btnStop.onclick = function (){
+			// 3.1 停止定时器
+			clearInterval(timer_handle);
+		}
+	</script>
+</html>
