@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul_delegate">
+        <li><button>111</button></li>
+        <li><button>222</button></li>
+        <li><button>333</button></li>
+        <li><button>444</button></li>
+        <li><button>555</button></li>
+    </ul>
+</body>
+<script>
+    var get_ul = document.getElementById("ul_delegate");
+
+
+    for (var i =0 ; i < 300 ; i ++){
+        let new_botton=document.createElement("button");
+        let new_li = document.createElement("li");
+        new_botton.innerHTML = "00" + (i+1);
+        new_li.appendChild(new_botton);
+        get_ul.appendChild(new_li);
+    }
+
+
+    var ul = document.getElementById("ul_delegate");
+    ul.onclick = function(){
+        if(event.target.nodeName.toLowerCase()=="button"){
+            console.log(event.target , event.target.innerHTML);
+        }
+    }
+
+    var ul = document.getElementById("ul_delegate");
+    ul.onclick=function(){
+        if (event.target.nodeName.toLowerCase()=="button"){
+        console.log(event.target , event.target.innerHTML);
+        }
+    }
+</script>
+</html>
