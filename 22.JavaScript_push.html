@@ -1,0 +1,33 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-07 09:47:44
+ * @LastEditTime: 2020-07-07 10:38:47
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/22.JavaScript_push.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组元素添加</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 1. 初始化数组
+  let x_array = new Array();
+  // 2. 动态添加数据 使用push 从数组末尾添加
+  x_array.push(1);
+  // 改变了原数组的内容和长度
+  console.log(x_array);
+  // 3. 添加其它类型
+  x_array.push("1");
+  x_array.push(true);
+  // 一次可添加多个数组，返回新的数组长度
+  x_array.push("hello","JavaScript", 666, 88888);
+  console.log(x_array);
+</script>
+</html>
