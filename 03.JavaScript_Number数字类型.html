@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-18 17:33:28
+ * @LastEditTime: 2020-06-19 11:48:46
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/03.JavaScript_数字类型.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number 数字类型</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 整数
+  var u_age = 18;
+  // 浮点数
+  var u_height = 1.75;
+  // 浮点数（双精准）
+  var u_eyes = 0.12345678;
+  // 正数
+  var p_number = +1;
+  // 负数
+  var n_number = -1;
+  // 支持科学计数法格式
+  var f_number = 3.14E6; // 3.14*10^6
+  var f_number2 = 3.14E-6; // 3.14*10^-6
+
+  // NaN
+  var box = 0/0;
+  var box2 = 12/0 * 0;
+  console.log(box,box2);
+  // 也可以通过 isNaN() 函数来判断是否是一个数字Number
+  // ECMAScript提供isNaN()函数，用来判断这个是不是NaN。
+  // isNaN()函数在接收到一个值后，会尝试将这个值转换成数值。
+  // isNaN的值是true 表示这不是一个数字，false表示是一个数字
+  console.log(isNaN(1)); // false 
+  console.log(isNaN("123")); // false
+  console.log(isNaN("hello world")); // true
+
+ 
+</script>
+</html>
