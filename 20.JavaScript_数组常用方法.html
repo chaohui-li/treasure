@@ -1,0 +1,77 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-04 13:57:01
+ * @LastEditTime: 2020-07-06 14:42:34
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/20.JavaScript_数组常用方法.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 数组常用方法</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 1.数组创建
+  // 1.1 创建一个空数组对象
+  let temp_array = new Array();
+  // 字面量创建一个 数组对象
+  let temp_array_null = [];
+  // 1.2 使用 Array 实例一个 数组变量 a_array
+  let a_array = new Array(1,2,3,4,5,6,7,8,9,10);
+  // 1.3 使用字面量 [] 定义一个 数组变量 b_array
+  let b_array = [1,2,3,4,5,6,7,8,9,10];
+  console.log('a_array 的类型', typeof(a_array));
+  console.log('a_array 的值：', a_array);
+  console.log('b_array 的类型', typeof (b_array));
+  console.log('b_array 的值：', b_array);
+  // 1.4 字面量和Array实例对象的区别
+  // let c_array = [1,2,3,,,,,,,,,100];
+  // let d_array = new Array(1,2,3,,,,,,100);
+  // console.log(c_array);
+  // console.log(d_array);
+  // 2. 数组长度
+  function p(s) {
+    document.write(s);
+    document.write("<br>");
+  }
+
+  let x_array = new Array(3, 1, 4, 1, 5, 9, 2, 6); //根据参数创建数组
+  p('当前数组是:' + x_array);
+  p('通过.length获取当前数组的长度:' + x_array.length);
+
+  x_array = new Array(3);
+  p('当前数组是:' + x_array);
+  p('通过.length获取当前数组的长度:' + x_array.length);
+
+  // 3.访问和遍历数组
+  // 3.1  访问数组
+  x_array = new Array(1,2,3,4,5,6,7,8,9,0);
+  p('当前数组是:' + x_array);
+  p('获取指定下标 0 的元素的值:' + x_array[0]);
+  p('获取指定下标 1 的元素的值:' + x_array[1]);
+  p('获取指定下标 2 的元素的值:' + x_array[2]);
+  p('获取指定下标 3 的元素的值:' + x_array[3]);
+  p('获取指定下标 最后一个 的元素的值:' + x_array[x_array.length - 1]);
+  p('获取指定下标 数组长度 的元素的值:' + x_array[x_array.length]);
+  
+  // 4. 遍历数组
+  // 4.1 for
+  for (let index = 0; index < x_array.length; index++) {
+    const element = x_array[index];
+    p("读取数组元素下标为" + index +"  元素的值:" + element);
+  }
+  // 4.2 for in 
+  for (const item in x_array) {
+    const element = x_array[item];
+    p("读取数组元素下标为" + item + "  元素的值:" + element);
+  }
+
+  
+</script>
+</html>
