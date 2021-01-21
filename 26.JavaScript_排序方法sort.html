@@ -1,0 +1,80 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-07 17:16:42
+ * @LastEditTime: 2020-07-17 14:12:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JS第三章/26.JavaScript_排序方法sort.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组 sort 排序</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function p(s) {
+    document.write(s);
+    document.write("<br>");
+  }
+
+  // 1. 初始化一个数组
+  let x_array = new Array(3, 1, 4, 1, 5, 9, 2, 6);
+  p('数组x是:' + x_array);
+  // 2. sort() 排序方法
+  x_array.sort();
+  p('使用sort排序后的数组x_array是:' + x_array);
+
+  // 2. 字母排序
+  x_array = ["Google","baiDu","Facebook","weiBo","WeChat"];
+  x_array.sort();
+  p('使用sort排序后的数组x_array是:' + x_array);
+
+  // 3.数字排序
+  x_array = [1,2,3,4,5,6,7,8,9,10,20];
+  x_array.sort();
+  p('使用sort排序后的数组x_array是:' + x_array);
+  // 4. 自定义比较方法
+  
+  // 5. 数组内容反转 reverse()
+  x_array = new Array(7,3, 1, 4, 1, 5, 9, 2, 6,8);
+  p('数组x是:' + x_array);
+  x_array.reverse();
+  p('使用reverse()函数进行反转后的值是:' + x_array);
+
+  // 6. 数组方法 slice()
+  x_array = new Array(3, 1, 4, 1, 5, 9, 2, 6);
+  p('数组x_array是:' + x_array);
+  let y_array = x_array.slice(1);//注释：如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。
+  p('x_array.slice(1)获取的子数组是:' + y_array);
+  let z_array = x_array.slice(1, 3);
+  p('x_array.slice(1,3)获取的子数组是:' + z_array);
+  let p_array = x_array.slice(1, 4);
+  p('x_array.slice(1,4)获取的子数组是:' + p_array);
+
+  // 7. 数组方法 splice()
+  // 7.1 指定位置增加项
+  x_array = [1, 2, 3, 4, 5];
+  p('原数组:' + x_array);
+  y_array = x_array.splice(1, 0, ["新增", "xinzeng"]);
+  p('原数组改变:' + x_array);
+  p('截取数组:' + y_array);
+  // 7.2 删除指定位置，并新增项
+  x_array = [1, 2, 3, 4, 5];
+  p('原数组:' + x_array);
+  y_array = x_array.splice(1, 1, ["新增", "xinzeng"]);
+  p('原数组改变:' + x_array);
+  p('截取数组:' + y_array);
+  // 7.3 只有1个数值
+  x_array = [1, 2, 3, 4, 5];
+  p('原数组:' + x_array);
+  y_array = x_array.splice(3);
+  p('原数组改变:' + x_array);
+  p('截取数组:' + y_array);
+  
+</script>
+</html>
