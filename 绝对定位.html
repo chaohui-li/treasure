@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+    header{
+        border:2px solid #ca9157;
+        height:100px;
+        width: 400px;
+    }
+    section{
+        border: 2px solid #FF0000;
+        height: 200px;
+        width: 200px;
+      position: absolute;
+      /* 绝对定位 */
+      top: 30px;
+      /* 当前为距离包含块顶部的距离 */
+      left: 40px;
+      /* 当前块距离包含块左边的距离 */
+    }
+    footer{
+        border:2px solid #0000ff;
+        width: 400px;
+        height: 100px;
+    }</style>
+</head>
+<body>
+  <header>
+      <h1>绝对定位</h1>
+  </header> 
+  <section>
+      <p>绝对定位是相对于最近的一个已经定位的祖先元素进行定位，
+          如果没有定位祖先元素，则相对于最初快，偏移原位置不在保留。</p>
+  </section>
+  <footer>
+      <p>&copy;版权保留</p>
+  </footer> 
+</body>
+</html>
